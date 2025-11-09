@@ -96,3 +96,21 @@ If you want, I can:
 - adapt the GitHub Actions workflow to only build (no push) or to publish to Docker Hub instead of GHCR,
 - or create a `docker-compose.yml` to demonstrate running the container with a reverse proxy.
 
+UI (static files)
+------------------
+I added a minimal web UI served from the `public/` folder that displays the greeting in the browser and includes a small client interaction (a button that shows an alert).
+
+Files added:
+
+- `public/index.html` — minimal HTML page with the greeting and a button
+- `public/styles.css` — simple styles to center and present the message
+- `public/script.js` — small client script that shows an alert when the button is clicked
+
+To access the UI locally, run `npm start` and open:
+
+```
+http://localhost:3000/
+```
+
+Or build and run the Docker image and visit the same URL on the mapped port.
+

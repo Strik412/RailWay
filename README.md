@@ -1,8 +1,8 @@
-📋 Project Description
+Project Description
 ----------------------
 This is an educational project created to learn about distributed systems and continuous deployment (CD) using GitHub Actions and Railway.
 
-🎯 What is the application about?
+What is the application about?
 -------------------------------
 This application is a minimal Node.js HTTP server that demonstrates:
 
@@ -11,20 +11,20 @@ This application is a minimal Node.js HTTP server that demonstrates:
 - Containerization: Dockerfile for building a production image
 - Hosting Platform: Deploy to Railway (or any container-friendly host)
 
-🏗️ Project Structure
+Project Structure
 --------------------
 Railway/
-├── index.js               # Minimal Node.js HTTP server
-├── package.json           # NPM metadata and start script
-├── Dockerfile             # Docker image definition
-├── .dockerignore          # Files excluded from Docker context
-├── .gitignore             # Files ignored by git
-├── README.md              # This file
+├── index.js               
+├── package.json           
+├── Dockerfile             
+├── .dockerignore          
+├── .gitignore             
+├── README.md              
 └── .github/
 	 └── workflows/
-		  └── ci.yml         # GitHub Actions workflow (build & publish)
+		  └── ci.yml         
 
-📄 Components
+Components
 ------------
 1. index.js
 	- A simple HTTP server that responds with: "Hello World from Railway!"
@@ -39,7 +39,7 @@ Railway/
 4. .github/workflows/ci.yml
 	- GitHub Actions workflow that installs dependencies, does a basic validation, builds a Docker image, and publishes it to GitHub Container Registry (GHCR).
 
-🚀 Deployment Flow
+Deployment Flow
 ------------------
 Deployment to Railway (Automatic via GitHub)
 
@@ -53,7 +53,6 @@ Deployment with Docker (Local)
 Option 1: Docker (build and run locally)
 
 ```powershell
-cd "C:\Users\Lenovo LOQ\Documents\Universidad\9no\Distribuida\Tareas\Railway"
 # Build the image
 docker build -t hola-railway:local .
 # Run the container (map host port 3000 to container port 3000)
@@ -70,7 +69,7 @@ docker compose up -d
 docker compose down
 ```
 
-🎓 Educational Purpose
+Educational Purpose
 ---------------------
 This project was created for educational purposes to learn about:
 
@@ -80,21 +79,17 @@ This project was created for educational purposes to learn about:
 - Containerization with Docker
 - Deploying to modern hosting platforms (Railway)
 
-🐳 Docker Requirements
+Docker Requirements
 ---------------------
 - Docker installed (version 20.10 or higher)
 - Docker Compose (included in Docker Desktop)
 
-📝 Notes
+Notes
 --------
 - GitHub Actions: The provided workflow publishes images to GitHub Container Registry (GHCR). The workflow uses the automatic `GITHUB_TOKEN` and requires repository Actions permissions to publish packages (the workflow sets `packages: write`).
 - Railway: The project uses `process.env.PORT`; when deploying on Railway make sure to configure the project to use the repository or Docker image as desired.
 - Environment variables: Add secrets or environment variables in the Railway dashboard or GitHub Secrets depending on the deployment flow.
 
-If you want, I can:
-- initialize a Git repository here and create the initial commit,
-- adapt the GitHub Actions workflow to only build (no push) or to publish to Docker Hub instead of GHCR,
-- or create a `docker-compose.yml` to demonstrate running the container with a reverse proxy.
 
 UI (static files)
 ------------------
